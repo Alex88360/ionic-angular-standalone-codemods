@@ -109,9 +109,7 @@ async function migrateAngularComponentClass(
   let ngModuleSourceFile: SourceFile | undefined;
   let modifiedNgModule = false;
 
-  if (!isAngularComponentStandalone(sourceFile)) {
-    ngModuleSourceFile = findNgModuleClassForComponent(sourceFile);
-  }
+  ngModuleSourceFile = findNgModuleClassForComponent(sourceFile);
 
   const hasIcons = ionIcons.length > 0;
 
